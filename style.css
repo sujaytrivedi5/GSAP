@@ -1,1 +1,33 @@
-
+*{
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root{
+    --var-main-bg: #151515;
+    --var-primary-font: 'Clash Display', sans-serif;
+    --var-primary-font-size: 100px;
+    --var-primary-line-height: 1;
+    --var-primary-font-color: #e0eeee;
+    --var-secondary-font: 'General Sans', sans-serif;
+    --var-text-font-size: 18px;
+    --var-text-line-height: 24px;
+}
+body{
+    background-color: var(--var-main-bg);
+}
+h1{
+    font-family: var(--var-primary-font);
+    font-size: var(--var-primary-font-size);
+    line-height: var(--var-primary-line-height);
+    color: var(--var-primary-font-color);
+}
+.first-section{
+    padding: 80px 0;
+}
+.main-heading {
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+}
