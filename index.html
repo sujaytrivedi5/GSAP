@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
@@ -24,11 +25,24 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CSSRulePlugin.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
-    <header>
-
+    <header class="strive-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 col-sm-4 col-4">
+                    <p class="logo-font">STRIVE<sup>&reg;</sup></p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-4"></div>
+                <div class="col-md-4 col-sm-4 col-4">
+                    <p class="menu-text">
+                        <a href="#">MENU <span class="material-symbols-outlined">menu</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <section class="first-section">
@@ -37,6 +51,32 @@
                     <div class="col-md-12">
                         <h1 id="target-one" class="main-heading text-center text-uppercase">Roar In the Digtal Wilderness.</h1>
                     </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-md-12 text-center">
+                    <p class="text-desc text-uppercase"> 
+                        <span>We roar with success, delivering the Project</span>
+                        <span>versatile design, branding and the latest</span> 
+                        <span>tech development to companies.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row button-wrapper">
+                    <div class="col-md-6 col-6 button-left">
+                        <button class="btn btn-dark btn-rounded">Explore Work</button>
+                    </div>
+                    <div class="col-md-6 col-6 button-right">
+                        <button class="btn btn-dark btn-rounded">Get in Touch</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <video class="home-video" src="assets/intro-video.mp4"></video>
                 </div>
             </div>
         </section>
