@@ -3,6 +3,7 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 :root{
     --var-main-bg: #151515;
@@ -14,8 +15,30 @@ html {
     --var-text-font-size: 18px;
     --var-text-line-height: 24px;
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 body{
     background-color: var(--var-main-bg);
+}
+.strive-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+.logo-font {
+    font-size: 36px;
+}
+.menu-text {
+    text-align: end;
+}
+.menu-text span {
+    line-height: 1.2;
+    vertical-align: middle;
 }
 h1{
     font-family: var(--var-primary-font);
@@ -23,11 +46,71 @@ h1{
     line-height: var(--var-primary-line-height);
     color: var(--var-primary-font-color);
 }
+a, a:hover {
+    text-decoration: none;
+    color: var(--var-primary-font-color);
+}
+
+
 .first-section{
     padding: 80px 0;
 }
 .main-heading {
-    opacity: 0;
+    /* opacity: 0; */
     backdrop-filter: blur(10px);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+p, button {
+    color: var(--var-primary-font-color);
+    font-family: var(--var-secondary-font);
+    font-size: var(--var-text-font-size);
+    line-height: var(--var-text-line-height);
+}
+button {
+    border-radius: 30px !important;
+    padding: 12px 36px !important;
+}
+.text-desc span {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    /* opacity: 0; */
+}
+.button-wrapper {
+    padding: 40px 0;
+}
+.button-right {
+    text-align: right;
+}
+.home-video {
+    border-radius: 10rem;
+}
+
+
+@media only screen and (max-width: 992px){
+    :root {
+        --var-primary-font-size: 60px;
+        --var-text-font-size: 16px;
+        --var-text-line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    :root {
+        --var-primary-font-size: 40px;
+        --var-text-font-size: 14px;
+        --var-text-line-height: 18px;
+    }
+    .strive-header .row{
+        align-items: flex-start;
+    }
+    button {
+        padding: 8px 24px !important;
+    }
+    .button-left {
+        text-align: right;
+    }
+    .button-right {
+        text-align: left;
+    }
 }
