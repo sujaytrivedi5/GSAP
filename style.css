@@ -148,7 +148,7 @@ button {
     transform-origin: top;
 }
 .recent-work {
-    padding: var(--var-section-padding);
+    padding: 18rem 0 6rem;
 }
 .heading-2 {
     text-transform: uppercase;
