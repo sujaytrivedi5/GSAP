@@ -8,12 +8,33 @@ html {
 :root{
     --var-main-bg: #151515;
     --var-primary-font: 'Clash Display', sans-serif;
-    --var-primary-font-size: 100px;
-    --var-primary-line-height: 1;
+    --var-primary-font-size: 6.5rem;
+    --var-primary-line-height: 6rem;
     --var-primary-font-color: #e0eeee;
     --var-secondary-font: 'General Sans', sans-serif;
     --var-text-font-size: 18px;
     --var-text-line-height: 24px;
+    --var-section-padding: 80px 0; 
+}
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #555555 #151515;
+  }
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 20px;
+    border: 3px solid 151515;
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -21,6 +42,27 @@ html {
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+.cursor {
+	display: none;
+}
+@media (any-pointer: fine) {
+	.cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+		z-index: 10000;
+	}
+	.cursor__inner {
+		fill: none;
+		stroke: #cccccc;
+		stroke-width: 1.2px;
+	}
+    .no-js .cursor {
+        display: none;
+    }
 }
 body{
     background-color: var(--var-main-bg);
@@ -46,6 +88,12 @@ h1{
     line-height: var(--var-primary-line-height);
     color: var(--var-primary-font-color);
 }
+h2{
+    font-family: var(--var-primary-font);
+    font-size: var(--var-primary-font-size);
+    line-height: var(--var-primary-line-height);
+    color: var(--var-primary-font-color);
+}
 a, a:hover {
     text-decoration: none;
     color: var(--var-primary-font-color);
@@ -53,7 +101,7 @@ a, a:hover {
 
 
 .first-section{
-    padding: 80px 0;
+    padding: var(--var-section-padding);
 }
 .main-heading {
     /* opacity: 0; */
@@ -82,10 +130,35 @@ button {
 .button-right {
     text-align: right;
 }
+.video-section {
+    display: flex;
+    width: 250px;
+    height: 100vh;
+    transition: width 0.3s ease;
+    margin: -10% auto;
+    /* justify-content: center; */
+}
 .home-video {
-    border-radius: 10rem;
+    justify-content: center;
+    --radius1: 30%;
+    display: block;
+    opacity: 0;
+    border-radius: var(--radius1);
+    margin: -10% auto;
+    transform-origin: top;
+}
+.recent-work {
+    padding: var(--var-section-padding);
+}
+.heading-2 {
+    text-transform: uppercase;
 }
 
+@media only screen and (min-width: 1600px) {
+    .video-section {
+        height: 70vh;
+    }
+}
 
 @media only screen and (max-width: 992px){
     :root {
@@ -108,9 +181,16 @@ button {
         padding: 8px 24px !important;
     }
     .button-left {
-        text-align: right;
+        text-align: left;
     }
     .button-right {
-        text-align: left;
+        text-align: right;
+    }
+    .home-video {
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+    .video-section {
+        width: 100%;
     }
 }
