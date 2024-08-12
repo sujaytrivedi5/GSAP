@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger:".heading-2",
       start: "top 60%",
       end: "bottom 50%",
-      markers: true,
+      // markers: true,
       // pin: true,
       scrub: 3,
       ease: "power2",
