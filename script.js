@@ -1,5 +1,9 @@
 // Lenis JS for Smooth Scrolling
 const lenis = new Lenis()
+// lenis.on('scroll', (e) => {
+//   console.log(e)
+// })
+
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
@@ -9,9 +13,9 @@ requestAnimationFrame(raf)
 
 document.addEventListener("DOMContentLoaded", (event) => {
   const lenis = new Lenis()
-  // lenis.on('scroll', (e) => {
-  //   console.log(e)
-  // })
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
 
   lenis.on('scroll', ScrollTrigger.update)
 
@@ -53,6 +57,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
   .to(".home-video", {
     // y: -50,
     alpha: 1,
+    stagger: 0.5,
+  });
+
+  var t2 = gsap.timeline({
+    scrollTrigger: {
+      trigger:".heading-2",
+      start: "top 60%",
+      end: "bottom 50%",
+      markers: true,
+      // pin: true,
+      scrub: 3,
+      ease: "power2",
+    },
+  });
+
+  t2.fromTo(".heading-2 span", {
+    x: -10,
+  }, 
+  { 
+    x: 5,
+    backgroundPositionX: "0%",
     stagger: 0.5,
   });
 
