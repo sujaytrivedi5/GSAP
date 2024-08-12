@@ -153,6 +153,16 @@ button {
 .heading-2 {
     text-transform: uppercase;
 }
+.heading-2 span {
+    display: block !important;
+    background: linear-gradient(90deg, #e0eeee 50%, #252525 0);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+}
 
 @media only screen and (min-width: 1600px) {
     .video-section {
