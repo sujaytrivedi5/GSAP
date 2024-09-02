@@ -94,6 +94,17 @@ h2{
     line-height: var(--var-primary-line-height);
     color: var(--var-primary-font-color);
 }
+h3 {
+    font-family: var(--var-primary-font);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--var-primary-font-color);
+}
+h4 {
+    font-family: var(--var-secondary-font);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
 a, a:hover {
     text-decoration: none;
     color: var(--var-primary-font-color);
@@ -122,7 +133,6 @@ button {
     display: block;
     font-size: 12px;
     line-height: 16px;
-    /* opacity: 0; */
 }
 .button-wrapper {
     padding: 40px 0;
@@ -133,7 +143,7 @@ button {
 .video-section {
     display: flex;
     width: 250px;
-    height: 100vh;
+    height: 70vh;
     transition: width 0.3s ease;
     margin: -10% auto;
     /* justify-content: center; */
@@ -145,10 +155,10 @@ button {
     opacity: 0;
     border-radius: var(--radius1);
     margin: -10% auto;
-    transform-origin: top;
+    transform-origin: center;
 }
 .recent-work {
-    padding: 18rem 0 6rem;
+    padding: 12rem 0 6rem;
 }
 .heading-2 {
     text-transform: uppercase;
@@ -162,11 +172,18 @@ button {
     background-clip: text;
     -webkit-background-clip: text;
     position: relative;
+    transform-origin: top 30%; 
+}
+.work-desc span{
+    display: block;
+}
+.project-section {
+    padding: var(--var-section-padding);
 }
 
 @media only screen and (min-width: 1600px) {
     .video-section {
-        height: 70vh;
+        height: 60vh;
     }
 }
 
