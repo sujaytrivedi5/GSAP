@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     stagger: 0.5,
   })
   .to(".home-video", {
-    // y: -50,
+    y: -50,
     alpha: 1,
     stagger: 0.5,
   });
@@ -63,14 +63,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
   var t2 = gsap.timeline({
     scrollTrigger: {
       trigger:".heading-2",
-      start: "top 60%",
-      end: "bottom 50%",
+      start: "top 50%",
+      // end: "bottom 20%",
       // markers: true,
       // pin: true,
-      scrub: 3,
+      scrub: 2,
       ease: "power2",
     },
   });
+
 
   t2.fromTo(".heading-2 span", {
     x: -10,
@@ -78,6 +79,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   { 
     x: 5,
     backgroundPositionX: "0%",
+    duration : 5,
+    stagger: 0.5,
+  });
+
+  gsap.from(".work-desc span", {
+    alpha: 0,
+    y: 100, 
     stagger: 0.5,
   });
 
@@ -89,7 +97,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scale: 5,
       scrollTrigger: {
         trigger: ".video-section",
-        start: "top 50%",
+        start: "top 30%",
         end: "+=80",
         // markers: true,
         pin: true,
